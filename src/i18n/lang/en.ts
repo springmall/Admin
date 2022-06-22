@@ -1,6 +1,6 @@
 const en = {
-  title: "Dyca",
-  slogan: "Deliver your content anywhere",
+  title: "SpringMall",
+  slogan: "Another open source e-commerce program",
 };
 
 export default en;

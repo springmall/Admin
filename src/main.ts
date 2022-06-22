@@ -1,8 +1,8 @@
 import { createApp } from "vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
-import Dyca from "./Dyca.vue";
-import Home from "./Home.vue";
+import SpringMall from "./SpringMall.vue";
+import routes from "./route/index.js";
 import { createI18n } from "vue-i18n";
 import { message } from "./i18n";
 
@@ -42,9 +42,8 @@ library.add(
   faCircleNotch
 );
 
-const app = createApp(Dyca);
+const app = createApp(SpringMall);
 
-console.log(message);
 const i18n = createI18n({
   locale: "zh",
   fallbackLocale: "zh",
@@ -64,24 +63,16 @@ for (const idx in components) {
   componentsList.push(components[idx].default);
 }
 
+var layout = import.meta.globEager("./layout/*.vue");
+for (const idx in layout) {
+  componentsList.push(layout[idx].default);
+}
+
 componentsList.forEach((component) => {
   app.component(component.name, component);
 });
 
-const User = {
-  template: "<div>User</div>",
-};
 
-const routes = [
-  {
-    path: "/file/:filepaths*",
-    component: Center,
-  },
-  {
-    path: "/",
-    component: Home,
-  },
-];
 
 const router = createRouter({
   history: createWebHashHistory(),
