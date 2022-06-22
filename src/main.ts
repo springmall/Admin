@@ -8,7 +8,6 @@ import { message } from "./i18n";
 
 import Center from "./view/Center.vue";
 import "./index.css";
-import "./Context.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faFile,
