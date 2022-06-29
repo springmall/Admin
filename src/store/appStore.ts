@@ -43,13 +43,13 @@ export const appStore = defineStore("appStore", {
           icon: "code",
           children: [
             {
-              name: "form",
+              name: "Form",
               route: "/form",
               _open: false,
               children: [],
             },
             {
-              name: "list",
+              name: "List",
               route: "/list",
               _open: false,
               children: [],

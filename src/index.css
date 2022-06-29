@@ -4,6 +4,7 @@
 
 .springshop ::-webkit-scrollbar {
   width: 10px;
+  position:   relative;
   height: 14px;
 }
 .springshop ::-webkit-scrollbar-corner {
