@@ -7,7 +7,7 @@
         <div class="flex flex-col">
           <PageTab></PageTab>
           <MenuPath></MenuPath>
-          <router-view v-slot="{ Component }">
+          <router-view class="p-2" v-slot="{ Component }">
             <transition>
               <keep-alive>
                 <component :is="Component" />

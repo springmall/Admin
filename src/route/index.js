@@ -4,6 +4,10 @@ import login from "../page/auth/Login.vue";
 import signup from "../page/auth/Signup.vue";
 import welcome from "../page/Welcome.vue";
 
+import dashboard from "../page/home/Dashboard.vue";
+import analyze from "../page/home/Analyze.vue";
+import Page404 from "../page/Page404.vue";
+
 const route = [
   {
     path: "/",
@@ -13,20 +17,22 @@ const route = [
     path: "/home",
     name: "home",
     component: PageLayout,
+    children: [
+      {
+        path: "dashboard",
+        name: "dashboard",
+        component: dashboard,
+      },
+      {
+        path: "analyze",
+        name: "analyze",
+        component: analyze,
+      },
+    ],
   },
   {
-    path: "/dashboard",
-    name: "dashboard",
-    component: PageLayout,
-  },
-  {
-    path: "/analyze",
-    name: "analyze",
-    component: PageLayout,
-  },
-  {
-    path: "/home",
-    name: "home",
+    path: "/menu",
+    name: "menu",
     component: PageLayout,
   },
   {
@@ -38,6 +44,16 @@ const route = [
     path: "/signup",
     name: "signup",
     component: signup,
+  },
+  {
+    path: "/404",
+    name: "Not Found",
+    component: Page404,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "Page404",
+    redirect: "/404",
   },
 ];
 

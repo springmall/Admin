@@ -6,51 +6,15 @@ import routes from "./route/index.js";
 import { createI18n } from "vue-i18n";
 import { message } from "./i18n";
 
-import Center from "./view/Center.vue";
 import "./index.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faFile,
-  faFolder,
-  faFolderOpen,
-  faUserSecret,
-  faChevronCircleRight,
-  faChevronCircleDown,
-  faFolderClosed,
-  faSpinner,
-  faCircle,
-  faCircleNotch,
-  faAdd,
-  faFolderPlus,
-  faFileCirclePlus,
-  faArrowLeft,
-  faArrowDown,
-  faAngleDown,
-  faAngleLeft,
-  faBars,
-} from "@fortawesome/free-solid-svg-icons";
+
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { createPinia } from "pinia";
 
-library.add(
-  faFolderPlus,
-  faFileCirclePlus,
-  faAdd,
-  faUserSecret,
-  faFile,
-  faFolder,
-  faFolderOpen,
-  faFolderClosed,
-  faChevronCircleRight,
-  faChevronCircleDown,
-  faSpinner,
-  faCircleNotch,
-  faArrowLeft,
-  faAngleLeft,
-  faArrowDown,
-  faAngleDown,
-  faBars
-);
+library.add(fas);
 
 const app = createApp(SpringMall);
 
@@ -81,8 +45,6 @@ for (const idx in layout) {
 componentsList.forEach((component) => {
   app.component(component.name, component);
 });
-
-
 
 const router = createRouter({
   history: createWebHashHistory(),

@@ -4,18 +4,19 @@
     v-for="m in data"
     :key="m.id"
   >
-    <div class="head flex px-4 py-2 hover:bg-blue-700 items-center" @click="DoToggleMenu(m)"
+    <div class="head flex px-4 py-2 hover:bg-blue-700 items-center transition-all" @click="DoToggleMenu(m)"
         :class="{
             'bg-blue-600':m._active
         }"
     >
       <div>
-        <font-awesome-icon :icon="m?.icon || 'bars'" />
+        <font-awesome-icon class=" w-5" :icon="m?.icon || 'bars'" />
       </div>
       <div class="flex-grow px-2">
         {{ m.name }}
       </div>
       <font-awesome-icon
+      class=" w-5"
         v-if="m?.children.length > 0"
         :icon="m._open ? 'angle-down' : 'angle-left'"
       />

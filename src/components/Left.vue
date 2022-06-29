@@ -1,7 +1,10 @@
 <template>
   <div class="select-none flex cursor-pointer   bg-slate-700 ">
-    <Logo></Logo>
-    <Menu :data="menu"></Menu>
+    <Logo class="flex-shrink-0"></Logo>
+    <MenuSearch></MenuSearch>
+    <div class="  overflow-auto" >
+      <Menu  :data="menu"></Menu>
+    </div>
   </div>
 </template>
 
@@ -11,6 +14,7 @@ import { appStore } from "../store/appStore";
 import { mapActions } from "pinia";
 import Logo from "./Logo.vue";
 import Menu from "./Menu.vue";
+import MenuSearch from "./MenuSearch.vue";
 
 export default {
     name: "Left",
@@ -30,6 +34,6 @@ export default {
     data() {
         return {};
     },
-    components: { Logo, Menu }
+    components: { Logo, Menu, MenuSearch }
 };
 </script>
