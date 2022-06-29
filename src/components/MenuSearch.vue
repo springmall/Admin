@@ -12,3 +12,10 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { mapState } from "pinia";
+export default {
+  name: "MenuSearch",
+  }
+</script>

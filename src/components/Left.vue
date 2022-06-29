@@ -1,5 +1,5 @@
 <template>
-  <div class="select-none flex cursor-pointer   bg-slate-700 ">
+  <div class="select-none flex cursor-pointer   flex-shrink-0 ">
     <Logo class="flex-shrink-0"></Logo>
     <div class="  overflow-auto" >
       <Menu  :data="menu"></Menu>

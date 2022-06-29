@@ -7,6 +7,13 @@ import welcome from "../page/Welcome.vue";
 import dashboard from "../page/home/Dashboard.vue";
 import analyze from "../page/home/Analyze.vue";
 import Page404 from "../page/Page404.vue";
+import Profile from "../page/user/Profile.vue";
+import MessageCenter from "../page/user/MessageCenter.vue";
+import Setting from "../page/user/Setting.vue";
+
+import TabPage from "../page/widget/TabPage.vue";
+import TablePage from "../page/widget/TablePage.vue";
+import TreePage from "../page/widget/TreePage.vue";
 
 const route = [
   {
@@ -27,6 +34,45 @@ const route = [
         path: "analyze",
         name: "analyze",
         component: analyze,
+      },
+    ],
+  },
+  {
+    path: "/widget",
+    component: PageLayout,
+    children: [
+      {
+        path: "table",
+        component: TablePage,
+      },
+      {
+        path: "tab",
+        component: TabPage,
+      },
+      {
+        path: "tree",
+        component: TreePage,
+      },
+    ],
+  },
+  {
+    path: "/user",
+    component: PageLayout,
+    children: [
+      {
+        path: "profile",
+        name: "user-center",
+        component: Profile,
+      },
+      {
+        path: "message",
+        name: "user-message",
+        component: MessageCenter,
+      },
+      {
+        path: "setting",
+        name: "system-setting",
+        component: Setting,
       },
     ],
   },

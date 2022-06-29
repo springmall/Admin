@@ -1,0 +1,3 @@
+<template>
+    <Tree></Tree>
+</template>

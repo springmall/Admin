@@ -14,7 +14,7 @@ import { appStore } from "../store/appStore";
 import { mapActions } from "pinia";
 
 export default {
-  name: "Menu",
+  name: "MenuPath",
   props: {
     data: Array,
   },

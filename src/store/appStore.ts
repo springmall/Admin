@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 
 const initMenu = (menu: any, parent: any) => {
-  console.log(menu);
+  // console.log(menu);
   menu?.forEach((m: any) => {
     m._parent = parent;
     m._active = false;
@@ -76,25 +76,25 @@ export const appStore = defineStore("appStore", {
           ],
         },
         {
-          name: "Components",
+          name: "Widget",
           _open: false,
           icon: "cube",
           children: [
             {
               name: "Tab",
-              route: "/404",
+              route: "/widget/tab",
               _open: false,
               children: [],
             },
             {
               name: "Tree",
-              route: "/404",
+              route: "/widget/tree",
               _open: false,
               children: [],
             },
             {
               name: "Table",
-              route: "/404",
+              route: "/widget/table",
               _open: false,
               children: [],
             },

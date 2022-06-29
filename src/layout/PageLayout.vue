@@ -5,9 +5,9 @@
       <Workspace class="flex flex-col grow overflow-hidden">
         <Header class="shadow"></Header>
         <div class="flex flex-col">
-          <PageTab></PageTab>
-          <MenuPath></MenuPath>
-          <router-view class="p-2" v-slot="{ Component }">
+          <!-- <PageTab></PageTab>
+          <MenuPath></MenuPath> -->
+          <router-view class="p-4 bg-gray-100 shadow-inner" v-slot="{ Component }">
             <transition>
               <keep-alive>
                 <component :is="Component" />

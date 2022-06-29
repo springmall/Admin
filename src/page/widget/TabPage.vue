@@ -1,0 +1,3 @@
+<template>
+    <Tab></Tab>
+</template>

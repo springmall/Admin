@@ -42,6 +42,12 @@ for (const idx in layout) {
   componentsList.push(layout[idx].default);
 }
 
+var widget = import.meta.globEager("./widget/*.vue");
+for (const idx in widget) {
+  componentsList.push(widget[idx].default);
+}
+
+
 componentsList.forEach((component) => {
   app.component(component.name, component);
 });
