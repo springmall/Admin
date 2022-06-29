@@ -5,6 +5,7 @@
     <div
       class="text-gray-500 text-sm flex items-center justify-center py-2 h-full"
     >
+    home 页面
     </div>
   </div>
 </template>

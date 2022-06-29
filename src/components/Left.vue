@@ -1,7 +1,7 @@
 <template>
-  <div class="select-none flex cursor-pointer">
-    <div class="px-2 py-2 border-b" v-for="m in menu" :key="m.id">
-    {{m.name}}</div>
+  <div class="select-none flex cursor-pointer   bg-slate-700 ">
+    <Logo></Logo>
+    <Menu :data="menu"></Menu>
   </div>
 </template>
 
@@ -9,26 +9,27 @@
 import { mapState } from "pinia";
 import { appStore } from "../store/appStore";
 import { mapActions } from "pinia";
+import Logo from "./Logo.vue";
+import Menu from "./Menu.vue";
 
 export default {
-  name: "Left",
-  computed: {
-    ...mapState(appStore, ["menu"]),
-  },
-  methods: { ...mapActions(appStore, ["setMenu"]) },
-  setup() {
-    const appstore = appStore();
-    return {
-      appStore,
-    };
-  },
-  mounted() {
-   
-  },
-  data() {
-    return {
-    
-    };
-  },
+    name: "Left",
+    computed: {
+        ...mapState(appStore, ["menu"]),
+    },
+    methods: { ...mapActions(appStore, ["setMenu"]) },
+    setup() {
+        const appstore = appStore();
+        return {
+            appStore,
+        };
+    },
+    mounted() {
+      this.setMenu(null);
+    },
+    data() {
+        return {};
+    },
+    components: { Logo, Menu }
 };
 </script>

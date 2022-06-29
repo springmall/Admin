@@ -1,9 +1,6 @@
 <template>
-    <div class="flex">
-      <div class="p-2 flex items-baseline"> 
-          <div>{{ $t("title") }}</div>
-          <div class=" text-gray-400 pl-5  text-xs"> {{ $t("slogan") }}</div>
-      </div>
+    <div class="flex text-gray-400 h-12">
+      
       <div></div>
       <div class="flex flex-row-reverse  flex-grow  items-center pr-2">
           <div>个人中心</div>

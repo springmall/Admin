@@ -4,6 +4,7 @@ const zh = {
   account: "账户:",
   password: "密码:",
   login_btn: "登录",
+  signup_btn: "注册",
 };
 
 export default zh;

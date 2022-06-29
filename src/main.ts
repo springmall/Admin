@@ -23,6 +23,11 @@ import {
   faAdd,
   faFolderPlus,
   faFileCirclePlus,
+  faArrowLeft,
+  faArrowDown,
+  faAngleDown,
+  faAngleLeft,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { createPinia } from "pinia";
@@ -39,7 +44,12 @@ library.add(
   faChevronCircleRight,
   faChevronCircleDown,
   faSpinner,
-  faCircleNotch
+  faCircleNotch,
+  faArrowLeft,
+  faAngleLeft,
+  faArrowDown,
+  faAngleDown,
+  faBars
 );
 
 const app = createApp(SpringMall);
