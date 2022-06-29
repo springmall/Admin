@@ -1,7 +1,7 @@
 <template>
     <div class="">
-        <div class="flex   flex-row text-base ">
-            <div class=" px-2 py-2 border flex items-center  cursor-pointer"
+        <div class="flex   border  border-b-0 flex-row text-base ">
+            <div class=" px-2 py-2 border-r flex items-center  cursor-pointer"
             :class="{
                 'bg-blue-500 text-white':idx==active
             }"
@@ -10,7 +10,7 @@
                 <font-awesome-icon v-if="closeable" class="w-5 text-gray-400 hover:text-gray-600 cursor-pointer" icon="close" />
             </div>
         </div>
-        <div class=" border p-1">
+        <div class=" border p-1 bg-white">
             <slot :active="active"></slot>
         </div>
     </div>

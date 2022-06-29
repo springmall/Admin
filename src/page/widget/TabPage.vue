@@ -1,8 +1,8 @@
 <template>
   <div class="flex">
     <panel
-      title="Table"
-      desc="sampleTable"
+      title="Tab"
+      desc=""
       class="w-1/2 m-2"
       closeable
       expandable
@@ -14,13 +14,12 @@
           <template v-slot:default="data">
             {{ data.active }}
           </template>
-        </Tab></template
-      >
+        </Tab></template>
     </panel>
 
-    <panel title="Table" desc="sampleTable" class="w-1/2 m-2" :noFooter="false" >
+    <panel title="Tab" desc="" class="w-1/2 m-2" :noFooter="false" >
       <template v-slot:default
-        ><Tab :data="data" :closeable="false">
+        ><Tab :data="data" >
           <template v-slot:default="data">
             {{ data.active }}
           </template>
@@ -30,8 +29,8 @@
     </panel>
 
     <panel
-      title="Table"
-      desc="sampleTable"
+      title="Tab"
+      desc=""
       class="w-1/2 m-2"
      
       :noFooter="false"
