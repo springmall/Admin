@@ -10,7 +10,7 @@
         }"
     >
       <div>
-        <font-awesome-icon class=" w-5" :icon="m?.icon || 'bars'" />
+        <font-awesome-icon class="w-5" :icon="m?.icon || ''" />
       </div>
       <div class="flex-grow px-2">
         {{ m.name }}

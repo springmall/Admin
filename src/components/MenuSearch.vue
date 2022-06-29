@@ -2,7 +2,7 @@
   <div class="px-4">
     <div class="flex items-center relative">
       <input
-        class="text-gray-800 w-full outline-none shadow-inner py-0.5 bg-gray-200 rounded-full pl-3 pr-12"
+        class="text-gray-800 w-full outline-none shadow-inner py-1 bg-gray-200 rounded-full pl-3  pr-12"
         placeholder="Search"
       />
       <font-awesome-icon

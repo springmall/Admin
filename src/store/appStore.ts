@@ -20,18 +20,119 @@ export const appStore = defineStore("appStore", {
           _open: true,
           icon: "home",
           _parent: null,
+          children: [],
+        },
+        {
+          name: "Dashboard",
+          route: "/home/dashboard",
+          icon: "chart-line",
+          _open: false,
+          children: [],
+        },
+        {
+          name: "Analyze",
+          icon: "chart-pie",
+          route: "/home/analyze",
+          _open: false,
+          children: [],
+        },
+
+        {
+          name: "Template",
+          _open: false,
+          icon: "code",
           children: [
             {
-              name: "Dashboard",
-              route: "/home/dashboard",
-              icon: "chart-line",
+              name: "form",
+              route: "/form",
               _open: false,
               children: [],
             },
             {
-              name: "Analyze",
-              icon: "chart-pie",
-              route: "/home/analyze",
+              name: "list",
+              route: "/list",
+              _open: false,
+              children: [],
+            },
+          ],
+        },
+        {
+          name: "Layout",
+          _open: false,
+          icon: "copy",
+          children: [
+            {
+              name: "appLayout",
+              route: "/appLayout",
+              _open: false,
+              children: [],
+            },
+            {
+              name: "pageLayout",
+              route: "/pageLayout",
+              _open: false,
+              children: [],
+            },
+          ],
+        },
+        {
+          name: "Components",
+          _open: false,
+          icon: "cube",
+          children: [
+            {
+              name: "Button",
+              route: "/404",
+              _open: false,
+              children: [],
+            },
+          ],
+        },
+        {
+          name: "Page",
+          _open: false,
+          icon: "file",
+          children: [
+            {
+              name: "404",
+              route: "/404",
+              _open: false,
+              children: [],
+            },
+            {
+              name: "Login",
+              route: "/login",
+              _open: false,
+              children: [],
+            },
+            {
+              name: "Email",
+              route: "/email",
+              _open: false,
+              children: [],
+            },
+            {
+              name: "Signup",
+              route: "/signup",
+              _open: false,
+              children: [],
+            },
+          ],
+        },
+        {
+          name: "User",
+          _open: false,
+          icon: "user",
+          children: [
+            {
+              name: "profile",
+              route: "/user/profile",
+              _open: false,
+              children: [],
+            },
+            {
+              name: "inbox",
+              route: "/user/inbox",
               _open: false,
               children: [],
             },
@@ -41,6 +142,7 @@ export const appStore = defineStore("appStore", {
           name: "Menu2",
           _open: false,
           _parent: null,
+          icon: "bars",
           children: [
             {
               name: "submenu1",
@@ -165,75 +267,6 @@ export const appStore = defineStore("appStore", {
             {
               name: "submenu8",
               route: "/submenu8",
-              _open: false,
-              children: [],
-            },
-          ],
-        },
-        {
-          name: "Template",
-          _open: false,
-          children: [
-            {
-              name: "form",
-              route: "/form",
-              _open: false,
-              children: [],
-            },
-            {
-              name: "list",
-              route: "/list",
-              _open: false,
-              children: [],
-            },
-          ],
-        },
-        {
-          name: "Layout",
-          _open: false,
-          children: [
-            {
-              name: "appLayout",
-              route: "/appLayout",
-              _open: false,
-              children: [],
-            },
-            {
-              name: "pageLayout",
-              route: "/pageLayout",
-              _open: false,
-              children: [],
-            },
-          ],
-        },
-        {
-          name: "Page",
-          _open: false,
-          icon: "user",
-          children: [
-            {
-              name: "404",
-              route: "/404",
-              _open: false,
-              children: [],
-            },
-            {
-              name: "Login",
-              route: "/login",
-              _open: false,
-              icon: "user",
-              children: [],
-            },
-            {
-              name: "Email",
-              route: "/email",
-              icon: "envelope",
-              _open: false,
-              children: [],
-            },
-            {
-              name: "Signup",
-              route: "/signup",
               _open: false,
               children: [],
             },
