@@ -1,7 +1,6 @@
 <template>
   <div class="select-none flex cursor-pointer   bg-slate-700 ">
     <Logo class="flex-shrink-0"></Logo>
-    <MenuSearch></MenuSearch>
     <div class="  overflow-auto" >
       <Menu  :data="menu"></Menu>
     </div>
