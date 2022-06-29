@@ -9,14 +9,14 @@
       noHeader
     >
       <template v-slot:default>
-        <div class="w-20">
+        <div class="w-32">
           <Dropdown title="方向">
             <template v-slot:default>
-              <div class="w-20 bg-blue-500 text-white">
-                <div class="px-2">上</div>
-                <div class="px-2">下</div>
-                <div class="px-2">左</div>
-                <div class="px-2">右</div>
+              <div class="w-32 bg-blue-500 text-white ">
+                <div class="px-2 py-1 hover:bg-blue-600">上</div>
+                <div class="px-2  py-1 hover:bg-blue-600">下</div>
+                <div class="px-2  py-1 hover:bg-blue-600" >左</div>
+                <div class="px-2  py-1 hover:bg-blue-600">右</div>
               </div>
             </template>
           </Dropdown>
@@ -32,5 +32,10 @@ import Panel from "../../widget/Panel.vue";
 export default {
   components: { Panel, Dropdown },
   name: "DropDownPage",
+  data(){
+    return {
+      open:false
+    }
+  }
 };
 </script>
