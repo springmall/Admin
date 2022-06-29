@@ -14,6 +14,7 @@ import Setting from "../page/user/Setting.vue";
 import TabPage from "../page/widget/TabPage.vue";
 import TablePage from "../page/widget/TablePage.vue";
 import TreePage from "../page/widget/TreePage.vue";
+import DropdownPage from "../page/widget/DropdownPage.vue";
 
 const route = [
   {
@@ -48,6 +49,10 @@ const route = [
       {
         path: "tab",
         component: TabPage,
+      },
+      {
+        path: "dropdown",
+        component: DropdownPage,
       },
       {
         path: "tree",

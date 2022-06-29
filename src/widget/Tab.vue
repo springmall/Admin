@@ -1,9 +1,10 @@
 <template>
     <div class="">
         <div class="flex   border  border-b-0 flex-row text-base ">
-            <div class=" px-2 py-2 border-r flex items-center  cursor-pointer"
+            <div class=" px-2 py-2  flex items-center  cursor-pointer "
             :class="{
-                'bg-blue-500 text-white':idx==active
+                'bg-blue-500 text-white':idx==active,
+                 'hover:bg-blue-100':idx!=active
             }"
             v-for="(t,idx) in data"  :key="t" @click="changeTab(idx)">
                 <div class="px-1   text-sm"> {{t.name}}</div>

@@ -98,6 +98,12 @@ export const appStore = defineStore("appStore", {
               _open: false,
               children: [],
             },
+            {
+              name: "Dropdown",
+              route: "/widget/dropdown",
+              _open: false,
+              children: [],
+            },
           ],
         },
         {

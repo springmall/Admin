@@ -6,12 +6,11 @@
           <div class=" text-sm font-bold">{{ title }}</div>
           <div class="text-sm   text-gray-500">{{ desc }}</div>
         </div>
-        <div class="action"> 
+        <div class="action" v-if="closeable"> 
            <font-awesome-icon class="w-5 text-gray-400 hover:text-gray-600 cursor-pointer" icon="close" />
         </div>
       </div>
     </slot>
-
     <div class="content  p-2 grow">
       <slot name="default"></slot>
     </div>
@@ -27,14 +26,18 @@ export default {
   props: {
     title: String,
     desc: String,
-      noFooter:{
+    noFooter:{
         type:Boolean,
         default:true,
     },
     noHeader:{
         type:Boolean,
         default:true,
-    }
+    },
+     closeable:{
+        type:Boolean,
+        default:true,
+    },
   },
 };
 </script>
