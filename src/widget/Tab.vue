@@ -1,13 +1,17 @@
 <template>
-    <div class="border p-2">
-        <div class="title">
-            <slot name="title"></slot>
+    <div class="">
+        <div class="flex   flex-row text-base ">
+            <div class=" px-2 py-2 border flex items-center  cursor-pointer"
+            :class="{
+                'bg-blue-500 text-white':idx==active
+            }"
+            v-for="(t,idx) in data"  :key="t" @click="changeTab(idx)">
+                <div class="px-1   text-sm"> {{t.name}}</div>
+                <font-awesome-icon v-if="closeable" class="w-5 text-gray-400 hover:text-gray-600 cursor-pointer" icon="close" />
+            </div>
         </div>
-        <div class="content">
-            <slot name="default"></slot>
-        </div>
-        <div class="footer">
-            <slot name="footer"></slot>
+        <div class=" border p-1">
+            <slot :active="active"></slot>
         </div>
     </div>
 </template>
@@ -16,5 +20,22 @@
 <script lang="ts">
 export default {
   name: "Tab",
+  data(){
+    return {
+        active:0
+    }
+  },
+  methods:{
+    changeTab(idx){
+        this.active=idx
+    }
+  },
+  props:{
+    data:Array,
+    closeable:{
+        type:Boolean,
+        default:true,
+    },
+  }
 };
 </script>
