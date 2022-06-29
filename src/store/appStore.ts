@@ -81,7 +81,19 @@ export const appStore = defineStore("appStore", {
           icon: "cube",
           children: [
             {
-              name: "Button",
+              name: "Tab",
+              route: "/404",
+              _open: false,
+              children: [],
+            },
+            {
+              name: "Tree",
+              route: "/404",
+              _open: false,
+              children: [],
+            },
+            {
+              name: "Table",
               route: "/404",
               _open: false,
               children: [],
@@ -125,13 +137,13 @@ export const appStore = defineStore("appStore", {
           icon: "user",
           children: [
             {
-              name: "profile",
+              name: "Profile",
               route: "/user/profile",
               _open: false,
               children: [],
             },
             {
-              name: "inbox",
+              name: "Inbox",
               route: "/user/inbox",
               _open: false,
               children: [],
