@@ -14,7 +14,7 @@ const initMenu = (menu: any, parent: any) => {
 export const appStore = defineStore("appStore", {
   state: () => {
     return {
-      isLogin: false,
+      isLogin: JSON.parse(window.localStorage.getItem("auth")!),
       menu: [
         {
           name: "Home",
@@ -299,7 +299,13 @@ export const appStore = defineStore("appStore", {
   },
   actions: {
     setLogin(payload: any) {
-      this.isLogin = true;
+      this.isLogin = payload;
+      window.localStorage.setItem("auth", JSON.stringify(payload));
+    },
+    setLogout() {
+      console.log("logout");
+      window.localStorage.removeItem("auth");
+      window.location.reload();
     },
     //设置菜单
     setMenu(menu: any) {
