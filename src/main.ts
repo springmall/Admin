@@ -1,19 +1,17 @@
 import { createApp } from "vue";
-import { createRouter, createWebHashHistory } from "vue-router";
 
 import SpringMall from "./SpringMall.vue";
-import routes from "./route/index.js";
+import route from "./route/index.js";
 import { createI18n } from "vue-i18n";
 import { message } from "./i18n";
+import { createRouter, createWebHashHistory } from "vue-router";
+import { appStore } from "./store/appStore";
 
 import "./index.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
-
 import { fas } from "@fortawesome/free-solid-svg-icons";
-
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { createPinia } from "pinia";
-
 library.add(fas);
 
 const app = createApp(SpringMall);
@@ -47,14 +45,22 @@ for (const idx in widget) {
   componentsList.push(widget[idx].default);
 }
 
-
 componentsList.forEach((component) => {
   app.component(component.name, component);
 });
 
+const store = appStore();
+console.log(store.isLogin);
+
 const router = createRouter({
   history: createWebHashHistory(),
-  routes,
+  routes: route,
+});
+
+router.beforeEach((to, form) => {
+  if (!store.isLogin && to.name !== "login") {
+    return { name: "login" };
+  }
 });
 
 app.use(router);

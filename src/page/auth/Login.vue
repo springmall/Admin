@@ -31,10 +31,22 @@
 </template>
 
 <script lang="ts">
+import { mapState } from "pinia";
+import { appStore } from "../../store/appStore";
+import { mapActions } from "pinia";
+
 export default {
   name: "Login",
+  setup() {
+    const appstore = appStore();
+    return {
+      appStore,
+    };
+  },
   methods: {
+    ...mapActions(appStore, ["setLogin"]),
     login() {
+      this.setLogin(true);
       this.$router.push({
         name: "home",
       });

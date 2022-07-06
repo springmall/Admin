@@ -14,6 +14,7 @@ const initMenu = (menu: any, parent: any) => {
 export const appStore = defineStore("appStore", {
   state: () => {
     return {
+      isLogin: false,
       menu: [
         {
           name: "Home",
@@ -297,6 +298,9 @@ export const appStore = defineStore("appStore", {
     };
   },
   actions: {
+    setLogin(payload: any) {
+      this.isLogin = true;
+    },
     //设置菜单
     setMenu(menu: any) {
       this.menu = menu == null ? this.menu : menu;

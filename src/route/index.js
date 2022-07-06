@@ -1,8 +1,9 @@
+
+
 import AppLayout from "../layout/AppLayout.vue";
 import PageLayout from "../layout/PageLayout.vue";
 import login from "../page/auth/Login.vue";
 import signup from "../page/auth/Signup.vue";
-import welcome from "../page/Welcome.vue";
 
 import dashboard from "../page/home/Dashboard.vue";
 import analyze from "../page/home/Analyze.vue";
@@ -19,7 +20,7 @@ import DropdownPage from "../page/widget/DropdownPage.vue";
 const route = [
   {
     path: "/",
-    component: welcome,
+    redirect: "/home"
   },
   {
     path: "/home",
@@ -107,5 +108,12 @@ const route = [
     redirect: "/404",
   },
 ];
+
+
+console.log(route);
+
+
+
+
 
 export default route;
