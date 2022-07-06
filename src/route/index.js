@@ -106,6 +106,18 @@ const route = [
     component: login,
   },
   {
+    path: "/login_v1",
+    component: () => import(`../page/auth/LoginV1.vue`),
+  },
+  {
+    path: "/login_v2",
+    component: () => import(`../page/auth/LoginV2.vue`),
+  },
+  {
+    path: "/login_v3",
+    component: () => import(`../page/auth/LoginV3.vue`),
+  },
+  {
     path: "/signup",
     name: "signup",
     component: signup,

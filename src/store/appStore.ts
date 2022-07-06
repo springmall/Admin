@@ -125,6 +125,24 @@ export const appStore = defineStore("appStore", {
               children: [],
             },
             {
+              name: "LoginV1",
+              route: "/login_v1",
+              _open: false,
+              children: [],
+            },
+            {
+              name: "LoginV2",
+              route: "/login_v2",
+              _open: false,
+              children: [],
+            },
+            {
+              name: "LoginV3",
+              route: "/login_v3",
+              _open: false,
+              children: [],
+            },
+            {
               name: "Email",
               route: "/email",
               _open: false,
