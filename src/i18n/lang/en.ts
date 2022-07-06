@@ -5,6 +5,11 @@ const en = {
   password: "Password",
   login_btn: "LOGIN",
   signup_btn: "SIGNUP",
+  default: "Default",
+  customize: "Customize",
+  profile: "Profile",
+  setting: "Setting",
+  logout: "Logout",
 };
 
 export default en;

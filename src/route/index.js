@@ -1,6 +1,5 @@
 
 
-import AppLayout from "../layout/AppLayout.vue";
 import PageLayout from "../layout/PageLayout.vue";
 import login from "../page/auth/Login.vue";
 import signup from "../page/auth/Signup.vue";
@@ -81,6 +80,20 @@ const route = [
         component: Setting,
       },
     ],
+  },
+  {
+    path: "/system",
+    component: PageLayout,
+    children: [
+      {
+        path: "themeBuilder",
+        component: () => import(`../page/system/ThemeBuilder.vue`),
+      },
+      {
+        path: "languageBuilder",
+        component: () => import(`../page/system/LanguageBuilder.vue`),
+      },
+    ]
   },
   {
     path: "/menu",

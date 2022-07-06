@@ -158,6 +158,25 @@ export const appStore = defineStore("appStore", {
           ],
         },
         {
+          name: "Builder",
+          _open: false,
+          icon: "layer-group",
+          children: [
+            {
+              name: "Language",
+              route: "/system/languageBuilder",
+              _open: false,
+              children: [],
+            },
+            {
+              name: "Theme",
+              route: "/system/themeBuilder",
+              _open: false,
+              children: [],
+            },
+          ],
+        },
+        {
           name: "Menu2",
           _open: false,
           _parent: null,
@@ -295,6 +314,17 @@ export const appStore = defineStore("appStore", {
       menuPath: [],
       activeMenu: null,
       version: "xxx",
+      theme: [{ name: "default" }],
+      language: [
+        {
+          name: "中文",
+          code: "zn",
+        },
+        {
+          name: "English",
+          code: "en",
+        },
+      ],
     };
   },
   actions: {
